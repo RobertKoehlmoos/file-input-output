@@ -19,7 +19,7 @@ def test_convert_json():
     if os.path.isfile(Path("sample_text/string_lengths_map.json")):
         os.remove(Path("sample_text/string_lengths_map.json"))  # cleaning up after ourselves
 
-    assert provided == expected
+    assert provided == expected, "Failed to create json file with appropriate values"
 
 
 def test_separate_sonnets():
@@ -30,7 +30,7 @@ def test_separate_sonnets():
     for file_path in os.listdir(Path("testing_text/sonnets")):
         with open(Path(f"sonnets/{file_path}"), "r") as provided,\
              open(Path(f"testing_text/sonnets/{file_path}")) as expected:
-            assert provided.read() == expected.read()
+            assert provided.read() == expected.read(), f"Sonnet {file_path} does not match expected lines"
 
     if os.path.isdir("sonnets"):
         shutil.rmtree("sonnets")  # cleaning up
@@ -45,7 +45,7 @@ def test_two_to_one_columns():
     with open(Path("sample_text/iso_8859-1_two_columns.txt"), "r") as provided, \
             open(Path("testing_text/iso_8859-1_two_columns.txt")) as expected:
         for provided_line, expected_line in zip(provided, expected):
-            assert provided_line.strip() == expected_line.strip()
+            assert provided_line.strip() == expected_line.strip(), f"'{expected_line}' should be '{provided_line}'"
 
     if os.path.isfile(Path("sample_text/iso_8859-1_two_columns.txt")):
         os.remove(Path("sample_text/iso_8859-1_two_columns.txt"))
