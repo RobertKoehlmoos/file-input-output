@@ -13,8 +13,9 @@ def convert_json():
 In the sample_text folder you will find a file named "sonnets.txt". This file contains (almost) all the
 sonnets written by William Shakespeare in a numbered order.
 
-Create a new folder named "sonnets", and store each sonnet in it as a separate file named "sonnet_x.txt" where the x
-is replaced with the sonnet number. The contents of each file should be only the lines of text for each sonnet, so
+Create a new folder named "sonnets" in the current directory and store each sonnet in it as a separate file named
+"sonnet_x.txt" where the x is replaced with the sonnet number.
+The contents of each file should be only the lines of text for each sonnet, so
 you don't need the empty lines above or below. Don't forget to have a newline at the end of the last line (that
 should make things easier rather than harder)
 

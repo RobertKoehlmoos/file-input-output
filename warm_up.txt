@@ -1,0 +1,8 @@
+Script 1:
+Write the string "hello world" to a file names hello_world.txt
+
+Script 2:
+Read hello_world.txt and then write the first word to a file names hello.txt and the second word to a file named world.txt
+
+Script 3:
+Create a list with the numbers 1 through 10. Write it to a file called nums.json. Then read that file to get the list back and print it to confirm.
